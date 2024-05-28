@@ -12,24 +12,25 @@
     width:1000px;
     height: 400px;
     position:relative; 
-    left: 440px;
+    left: 430px;
 }
 #content{
     width:100%;
     height:280px;
-    padding: 40px;
+    
     left: 410px;
     position:relative;
 }
 .g_top{
-    background: url(../image/g2.jpeg) center; 
+    background: url(../image/g2.jpeg) left; 
     width:30%;
     height:380px;
-    float: 10px;}
+    float: 10px;
+}
  .g_right{
     background: url(../image/g3.jpeg) right;
     width:30%;
-    height: 400px;
+    height:400px;
     float:10px;
     float:right;
     
