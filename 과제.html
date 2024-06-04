@@ -14,18 +14,20 @@
         //                 총 몇 일 단축 되었는가?   
         //       모든 값은 정수만 출력 
 
+        //총 분 5*2*365*20
+        //시간 5*2*365*20/60
+        //일  5*2*365*20/60/24
 
-        // today=Number(prompt("하루에 몇잔씩 마시는지?"));
-        // 한잔=2;
-        // 일=1;
-        // 시간=24;
-        // 분=60;
-        
+        today=Number(prompt("하루에 몇잔씩 마시는지?"));
+       
+        총몇분 =Math.floor(today*2*365*20);
+        시간 =Math.floor(총몇분/60);
+        일 =Math.floor(시간/24);
 
 
-        // document.write("몇분 단축 되었는가?:"+(한잔*분+"<br>"));
-        // document.write("몇시간 단축되었는가?:"+(한잔*시간+"<br>"));
-        // document.write("몇일 단축되었는가?:"+(한잔*분+"<br>"));
+        document.write("몇분 단축 되었는가?:"+(총몇분+"<br>"));
+        document.write("몇시간 단축되었는가?:"+(시간+"<br>"));
+        document.write("몇일 단축되었는가?:"+(일+"<br>"));
 
 
  // 과제 2.
@@ -33,9 +35,13 @@
         dice1=Math.floor(Math.random()*6)+1;
         dice2=Math.floor(Math.random()*6)+1;
         
-        
-        출력내용=("당첨("+dice1==dice2);
-        출력내용=("꽝("+dice1!==dice2);
+
+//(조건식) ?  참 : 거짓 ;
+
+출력내용= (dice1 == dice2) ? "당첨" : "꽝";
+
+        // 출력내용=("당첨:"+dice1==dice2+"<br>");
+        // 출력내용=("꽝:"+dice1 != dice2);
         
         document.write(출력내용);
        
