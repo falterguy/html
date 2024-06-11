@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Random Numbers</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+  }
+</style>
+</head>
+<body>
+
+<button onclick="displayRandomNumbers()">랜덤 숫자 표시하기</button>
+<div id="numberContainer"></div>
+
+<script>
+  // 랜덤한 숫자를 생성하는 함수
+  function generateRandomNumbers(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+
+  // 숫자들을 화면에 표시하는 함수
+  function displayRandomNumbers() {
+    var numberContainer = document.getElementById("numberContainer");
+    numberContainer.innerHTML = ""; // 이전에 표시된 숫자들을 초기화
+
+    for (var i = 0; i < 5; i++) {
+      var row = document.createElement("div"); // 새로운 줄을 만듦
+      for (var j = 0; j < 4; j++) {
+        var randomNumber = generateRandomNumbers(1, 50); // 1에서 50까지의 랜덤한 숫자 생성
+        var numberSpan = document.createElement("span");
+        numberSpan.textContent = randomNumber + " "; // 숫자를 표시하고 각 숫자 사이에 공백 추가
+        row.appendChild(numberSpan); // 숫자를 줄에 추가
+      }
+      numberContainer.appendChild(row); // 줄을 숫자 컨테이너에 추가
+    }
+  }
+</script>
+
+</body>
+</html>
